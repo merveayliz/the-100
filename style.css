@@ -8,76 +8,74 @@ body {
     overflow-x: hidden;
     
 }
-
-/* --- GİRİŞ SAYFASI--- */
 #mesaj {
-    font-family: 'Pinyon Script', cursive; /* El yazısı fontu */
-    font-size: 2.8rem; /* Yazı büyüklüğü */
-    color: #082185; /* Okyanus mavisi */
-    text-shadow: 0 0 15px rgba(3, 113, 247, 0.6); /* Hafif parlama */
-    margin-bottom: 25px; /* Form ile aradaki boşluk */
+    font-family: 'Pinyon Script', cursive; 
+    font-size: 2.8rem; 
+    color: #082185;
+    text-shadow: 0 0 15px rgba(3, 113, 247, 0.6);
+    margin-bottom: 25px; 
 }
 
-/* --- TERMİNAL GÖRÜNÜMLÜ FORM ALANI --- */
+
 #form-alani {
-    background: rgba(0, 15, 10, 0.85); /* VS Code koyu arka plan teması */
-    padding: 30px; /* İç boşluk */
-    border: 1px solid #03100a; /*çerçeve */
-    border-radius: 4px; /* Keskin/Hafif yuvarlak köşeler */
-    box-shadow: 0 0 20px rgba(0, 255, 150, 0.15); /* Dış ışıma */
-    backdrop-filter: blur(8px); /* Arkadaki yıldızları hafif bulanıklaştırır */
+    background: rgba(0, 15, 10, 0.85);
+    padding: 30px; 
+    border: 1px solid #03100a; 
+    border-radius: 4px; 
+    box-shadow: 0 0 20px rgba(0, 255, 150, 0.15);
+    backdrop-filter: blur(8px); 
 }
 
 input {
-    border: 1px solid #008855; /* Başlangıç çerçeve rengi */
-    color: #26342e; /* Yazı rengi neon yeşil */
-    padding: 12px; /* Yazı yazma alanı boşluğu */
-    font-family: 'Fira Code', monospace; /* VS Code kod fontu */
-    margin-bottom: 15px; /* Altındaki butonla mesafe */
-    width: 250px; /* Genişlik */
-    outline: none; /* Tıklanınca çıkan varsayılan çizgiyi siler */
-    transition: 0.3s; /* Parlama hızı */
+    border: 1px solid #008855; 
+    color: #26342e; 
+    padding: 12px; 
+    font-family: 'Fira Code', monospace; 
+    margin-bottom: 15px;
+    width: 250px; 
+    outline: none; 
+    transition: 0.3s; 
 }
 
 input:focus {
-    border-color: #00ff96; /* Tıklayınca çerçeve parlar */
-    box-shadow: 0 0 12px rgba(0, 255, 150, 0.3); /* Odaklanma ışıması */
+    border-color: #00ff96; 
+    box-shadow: 0 0 12px rgba(0, 255, 150, 0.3); 
 }
 
-/* --- DÜNYAYA İNİŞ BUTONU (SCİ-Fİ STYLE) --- */
+
 button, .inis-btn {
-    padding: 15px 40px; /* Buton boyutu */
-    background: transparent; /* Şeffaf arka plan */
-    border: 2px solid #00ff96; /* Neon yeşil kalın çerçeve */
-    color: #00ff96; /* Yazı rengi */
-    font-family: 'Fira Code', monospace; /* VS Code fontu */
-    font-weight: bold; /* Kalın yazı */
-    text-transform: uppercase; /* Tüm harfler büyük */
-    letter-spacing: 3px; /* Harf arası genişlik */
-    cursor: pointer; /* Fare gelince el işareti */
-    transition: all 0.3s ease; /* Tüm efektlerin geçiş süresi */
-    position: relative; /* Efektler için konumlandırma */
+    padding: 15px 40px; 
+    background: transparent; 
+    border: 2px solid #00ff96; 
+    color: #00ff96; 
+    font-family: 'Fira Code', monospace; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 3px;
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    position: relative; 
 }
 
 button:hover, .inis-btn:hover {
-    background: #00ff96; /* Üstüne gelince içi neon yeşil dolar */
-    color: black; /* Yazı siyah olur */
-    box-shadow: 0 0 30px #00ff96; /* Güçlü neon patlaması */
-    letter-spacing: 5px; /* Yazı hafifçe genişler */
+    background: #00ff96; 
+    color: black; 
+    box-shadow: 0 0 30px #00ff96; 
+    letter-spacing: 5px;
 }
 
 button:active, .inis-btn:active {
-    transform: scale(0.92); /* Tıklayınca %8 küçülür (basılma hissi) */
+    transform: scale(0.92); 
 }
 
-/* --- "DÜNYAYA İNİŞ YAPIYORSUN" YÜKLEME EFEKTİ --- */
+
 .inis-yazisi {
-    font-family: 'Fira Code', monospace; /* Kod fontu */
-    color: #00ff96; /* Neon yeşil */
-    font-size: 0.8rem; /* Küçük bilgi yazısı */
-    margin-top: 15px; /* Butonun altındaki boşluk */
-    text-transform: uppercase; /* Büyük harf */
-    animation: yanSon 1.2s infinite; /* Yanıp sönme animasyonu */
+    font-family: 'Fira Code', monospace; 
+    color: #00ff96; 
+    font-size: 0.8rem; 
+    margin-top: 15px;
+    text-transform: uppercase; 
+    animation: yanSon 1.2s infinite; 
 }
 
 @keyframes yanSon {
@@ -86,7 +84,7 @@ button:active, .inis-btn:active {
     100% { opacity: 0.1; }
 }
 
-/* --- 2. GİRİŞ SAYFASI (DÜZENLENMİŞ) --- */
+
 .merkez {
     display: flex;
     flex-direction: column;
@@ -95,48 +93,47 @@ button:active, .inis-btn:active {
     height: 100vh;
     text-align: center;
     transition: transform 0.9s ease-out; 
-    gap: 10px; /* Başlık, mesaj ve form arasındaki dev boşluğu daraltır */
+    gap: 10px; 
 }
 
 #ust-bolum { 
     display: flex; 
     align-items: center; 
-    justify-content: center; /* Logoyu ve başlığı tam ortalar */
+    justify-content: center; 
     gap: 20px; 
-    margin-bottom: 0; /* Altındaki mesajla arayı kapatır */
-}
-/* --- ARK-OS BAŞLIK GÜNCELLEME --- */
-#site-adi {
-    font-family: 'Fira Code', monospace; /* VS Code kod fontu */
-    font-size: 5.5rem; /* Büyük ve etkileyici boyut */
-    font-weight: bold; /* Kalın yazı */
-    letter-spacing: 12px; /* Karakter arası genişlik */
-    color: #000000; /* Saydamlığı kaldırdık, tam neon yeşil yaptık */
-    text-shadow: 0 0 15px rgba(0, 255, 150, 0.7), 0 0 30px rgba(0, 255, 150, 0.3); /* Terminal parlama efekti */
-    margin: 0; /* Boşlukları sıfırla */
-    display: inline-block; /* Animasyon için gerekli */
+    margin-bottom: 0; 
 }
 
-/* --- ALT MESAJ GÜNCELLEME (Terminal Tipi) --- */
-#mesaj {
-    font-family: 'Fira Code', monospace; /* El yazısını bıraktık, kod fontuna geçtik */
-    font-size: 1.5rem; /* Okunaklı terminal boyutu */
-    color: #0563b5; /* Başlıkla aynı neon yeşil */
-    text-shadow: 0 0 10px rgba(243, 255, 250, 0.5); /* Hafif parlama */
-    margin-top: 10px; /* Başlıkla arayı hafif açar */
-    text-transform: uppercase; /* Tüm harfler büyük (The 100 stili) */
-    letter-spacing: 3px; /* Kod gibi durması için mesafe */
-    opacity: 1; /* Saydamlık tamamen kapalı */
+#site-adi {
+    font-family: 'Fira Code', monospace; 
+    font-size: 5.5rem; 
+    font-weight: bold;
+    letter-spacing: 12px; 
+    color: #000000; 
+    text-shadow: 0 0 15px rgba(0, 255, 150, 0.7), 0 0 30px rgba(0, 255, 150, 0.3);
+    margin: 0; 
+    display: inline-block; 
 }
-/* Formun görünme hızını düzelt (15s çok yavaştı) */
-.gorunur { 
+
+
+#mesaj {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.5rem; 
+    color: #0563b5; 
+    text-shadow: 0 0 10px rgba(243, 255, 250, 0.5); 
+    margin-top: 10px; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    opacity: 1;
+}
+
     opacity: 1; 
     display: block; 
-    transition: opacity 1s ease-in; /* 15 saniyeden 1 saniyeye indirdik */
+    transition: opacity 1s ease-in; 
 }
-/* --- DÜNYA GÖRÜNÜMÜ GÜNCELLEME --- */
+
 .dunya {
-    width: 100px; /* Dünya genişliği */
+    width: 100px;
     height: 100px; /* Dünya yüksekliği */
     background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Earth_Western_Hemisphere_transparent_background.png/1200px-Earth_Western_Hemisphere_transparent_background.png');
     background-size: cover;
@@ -669,4 +666,5 @@ button:active, .inis-btn:active {
 .kapat-btn:hover {
     color: #ff3e3e;
     transform: scale(1.2);
+
 }
