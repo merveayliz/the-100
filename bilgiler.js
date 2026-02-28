@@ -94,8 +94,6 @@ function bilgileriYukle(filtreliListe = bilgiBankasi) {
     alan.innerHTML = "";
 
     filtreliListe.forEach((bilgi) => {
-        // HATA BURADAYDI: Indeks yerine başlığı parametre olarak gönderiyoruz
-        // Tırnak işaretleri bozulmasın diye escape (kaçış) karakteri ekledik
         const güvenliBaslik = bilgi.baslik.replace(/'/g, "\\'");
         
         alan.innerHTML += `
@@ -109,7 +107,6 @@ function bilgileriYukle(filtreliListe = bilgiBankasi) {
     });
 }
 
-// --- MODAL FONKSİYONLARI (Bunlar eksik olduğu için açılmıyordu) ---
 function modalAc(baslik) {
     const veri = bilgiBankasi.find(b => b.baslik === baslik);
     
@@ -119,9 +116,8 @@ function modalAc(baslik) {
         
         const modal = document.getElementById("bilgi-modal");
         
-        // Önce gizli sınıfını atalım, sonra aktif sınıfını ekleyelim
         modal.classList.remove("modal-gizli");
-        modal.classList.add("aktif"); // CSS'deki flex kuralını tetikler
+        modal.classList.add("aktif"); 
     }
 }
 
@@ -130,11 +126,11 @@ function modalKapat() {
     modal.classList.remove("aktif");
     modal.classList.add("modal-gizli");
 }
-// --- FİLTRELEME FONKSİYONLARI ---
+
 
 function kategoriFiltrele(kat) {
     aktifKategori = kat;
-    filtrele(); // Kategoriyi seçince genel filtreyi tetikle
+    filtrele(); 
 }
 
 function filtrele() {
@@ -151,13 +147,14 @@ function filtrele() {
     bilgileriYukle(süzülmüş);
 }
 
-// Sayfa yüklendiğinde verileri bas
+
 window.onload = () => bilgileriYukle();
 
-// Modal dışına tıklandığında kapanması için ek bilgi (isteğe bağlı)
+
 window.onclick = function(event) {
     const modal = document.getElementById("bilgi-modal");
     if (event.target == modal) {
         modalKapat();
     }
+
 }
