@@ -134,22 +134,18 @@ button:active, .inis-btn:active {
 
 .dunya {
     width: 100px;
-    height: 100px; /* Dünya yüksekliği */
+    height: 100px; 
     background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Earth_Western_Hemisphere_transparent_background.png/1200px-Earth_Western_Hemisphere_transparent_background.png');
     background-size: cover;
     border-radius: 50%;
-    /* Çerçeve ve parlamayı sadece beyaz yapan satır burası: */
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.3); 
-    animation: don 20s linear infinite; /* Kendi ekseninde dönme hızı */
+    animation: don 20s linear infinite; 
 }
 @keyframes don { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-.yukari-kay { transform: translateY(-14vh); } /* başlığın üst kısımın ayarı */
+.yukari-kay { transform: translateY(-14vh); } 
 .gizli { opacity: 0; display: none; }
-/* Formun görünme hızı: 1s yerine 15s yaptık */
 .gorunur { opacity: 1; display: block; transition: opacity 15s ease-in; }
-
-/* --- 3. SIDEBAR (SOL MENÜ) --- */
 .sidebar {
     width: 250px;
     height: 100vh;
@@ -207,7 +203,6 @@ button:active, .inis-btn:active {
     box-shadow: inset 4px 0 0 #00ff96;
 }
 
-/* --- 4. ANA İÇERİK VE KARTLAR (BİRLEŞTİRİLDİ) --- */
 .ana-icerik { margin-left: 290px; padding: 40px; }
 
 .sayfa-basligi {
@@ -270,65 +265,60 @@ button:active, .inis-btn:active {
 }
 
 
-/* --- 5. KARAKTER DETAY (MODAL) SİSTEMİ --- */
-
-/* Tüm ekranı kaplayan karartma katmanı */
 .modal-gizli {
-    display: none;          /* Başlangıçta görünmesin diye gizledik */
-    position: fixed;       /* Sayfa kaysa bile ekranda sabit kalsın */
-    z-index: 2000;         /* Sidebar(1000) ve her şeyin üstünde durması için en yüksek değer */
+    display: none;         
+    position: fixed;      
+    z-index: 2000;         
     left: 0; 
     top: 0;
-    width: 100%;           /* Tüm ekran genişliği */
-    height: 100%;          /* Tüm ekran yüksekliği */
-    background-color: rgba(0, 0, 0, 0.9); /* %90 siyahlıkta şeffaf arka plan */
-    backdrop-filter: blur(8px); /* Arkadaki kartları bulanıklaştırarak odak sağlar */
+    width: 100%;          
+    height: 100%;        
+    background-color: rgba(0, 0, 0, 0.9); 
+    backdrop-filter: blur(8px); 
 }
 
-/* Ekranın ortasındaki terminal görünümlü kutu */
+
 .modal-icerik {
-    background: rgba(10, 20, 15, 0.98); /* Çok koyu yeşil/siyah karışımı */
-    margin: 10% auto;       /* Üstten %10 boşluk bırak, yatayda ortala */
+    background: rgba(10, 20, 15, 0.98); 
+    margin: 10% auto;      
     padding: 40px;
-    border: 2px solid #00ff96; /* Neon yeşil çerçeve */
-    width: 90%;             /* Mobilde geniş dursun */
-    max-width: 500px;       /* Bilgisayarda çok devleşmesin */
+    border: 2px solid #00ff96; 
+    width: 90%;            
+    max-width: 500px;       
     text-align: center;
-    border-radius: 15px;    /* Köşeleri yumuşattık */
-    box-shadow: 0 0 40px rgba(0, 255, 150, 0.3); /* Dışa doğru neon ışıma */
-    position: relative;     /* İçindeki kapatma butonu buna göre konumlanacak */
-    animation: modalGiris 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Zıplayarak gelme efekti */
+    border-radius: 15px;    
+    box-shadow: 0 0 40px rgba(0, 255, 150, 0.3); 
+    position: relative;     
+    animation: modalGiris 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Sağ üstteki kapatma (X) butonu */
+
 .kapat-btn {
-    position: absolute;     /* Modal-icerik kutusuna göre serbest konumlandırma */
+    position: absolute;    
     right: 20px; 
     top: 15px;
     color: #00ff96;
     font-size: 30px;
     font-weight: bold;
-    cursor: pointer;        /* Üstüne gelince el işareti çıksın */
+    cursor: pointer;      
     transition: 0.3s;
 }
 
 .kapat-btn:hover {
-    color: #ff4d4d;         /* Üstüne gelince "kapatma" hissi için kırmızı olsun */
-    transform: rotate(90deg); /* Havalı bir dönüş efekti */
+    color: #ff4d4d;        
+    transform: rotate(90deg); 
 }
 
-/* Modalın küçülerek ekrana gelme animasyonu */
 @keyframes modalGiris {
-    from { transform: scale(0.5); opacity: 0; } /* Başta %50 küçük ve görünmez */
-    to { transform: scale(1); opacity: 1; }     /* Sonra normal boyut ve görünür */
+    from { transform: scale(0.5); opacity: 0; } 
+    to { transform: scale(1); opacity: 1; }   
 }
 
-/* --- 6.SOHBET SAYFASI ARKA PLANI --- */
 .sohbet-body {
     margin: 0;
     padding: 0;
-    padding-left: 250px; /* menü ve mesaj kutusu arasındaki boşluk*/
-    box-sizing: border-box;   /* padding'in genişliği bozulmasın */
+    padding-left: 250px; 
+    box-sizing: border-box;   
     height: 100vh;
     display: flex;
     align-items: center;
@@ -336,22 +326,21 @@ button:active, .inis-btn:active {
     font-family: 'Fira Code', monospace;
 }
 
-/* --- TERMİNAL PENCERESİ (Görseldeki Birebir Stil) --- */
+
 .terminal-pencere {
-    width: 90%; /* Mobilde de düzgün durması için */
+    width: 90%; 
     max-width: 800px;
     height: 500px;
-    background: rgba(0, 15, 10, 0.85); /* Şeffaf koyu yeşil/siyah */
-    border: 2px solid #00ff96; /* Neon yeşil çerçeve */
+    background: rgba(0, 15, 10, 0.85); 
+    border: 2px solid #00ff96; 
     border-radius: 8px;
     box-shadow: 0 0 30px rgba(0, 255, 150, 0.3);
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    backdrop-filter: blur(10px); /* Cam efekti */
+    backdrop-filter: blur(10px); 
 }
 
-/* --- ÜST YEŞİL BAR --- */
 .terminal-header {
     background: #00ff96;
     color: #000;
@@ -363,7 +352,7 @@ button:active, .inis-btn:active {
     letter-spacing: 1px;
 }
 
-/* --- MESAJ ALANI --- */
+
 #mesaj-alani {
     flex: 1;
     padding: 25px;
@@ -374,16 +363,16 @@ button:active, .inis-btn:active {
     gap: 15px;
 }
 
-/* Görseldeki Mesaj Kutusu Tasarımı */
+
 .mesaj-balonu {
     background: rgba(0, 255, 150, 0.05);
     border: 1px solid rgba(0, 255, 150, 0.4);
-    border-left: 5px solid #00ff96; /* Sol taraftaki ikonik yeşil şerit */
+    border-left: 5px solid #00ff96; 
     padding: 12px 18px;
     border-radius: 4px;
     max-width: 80%;
     align-self: flex-start;
-    animation: yaziGel 0.3s ease-out; /* Hafif çıkış animasyonu */
+    animation: yaziGel 0.3s ease-out; 
 }
 
 @keyframes yaziGel {
@@ -397,7 +386,6 @@ button:active, .inis-btn:active {
     font-size: 0.85rem; 
 }
 
-/* --- ALT YAZMA ALANI --- */
 .terminal-footer {
     padding: 20px;
     display: flex;
@@ -433,7 +421,7 @@ button:active, .inis-btn:active {
     box-shadow: 0 0 20px #00ff96;
 }
 
-/* --- TEST SAYFASI CİLASI --- */
+
 .merkez-icerik {
     text-align: center;
     padding-top: 50px;
@@ -464,7 +452,6 @@ button:active, .inis-btn:active {
 
 .gizli { display: none !important; }
 
-/* --- SONUÇ KARTI VE RESİM STİLLERİ --- */
 .sonuc-kart {
     display: flex;
     flex-direction: column;
@@ -475,9 +462,9 @@ button:active, .inis-btn:active {
 .sonuc-img {
     width: 200px;
     height: 200px;
-    object-fit: cover; /* Resmi bozmadan kutuya sığdırır */
+    object-fit: cover;
     border: 3px solid #00ff96;
-    border-radius: 50%; /* Yuvarlak profil resmi havası verir */
+    border-radius: 50%; 
     box-shadow: 0 0 20px rgba(0, 255, 150, 0.5);
     animation: resimParlama 2s infinite alternate;
 }
@@ -502,21 +489,19 @@ button:active, .inis-btn:active {
     color: #000;
 }
 
-/* --- BİLGİ KARTLARI: GÜNCEL MERKEZLEME --- */
 .bilgi-konteynir {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 350px)); /* Kart genişliğini sabitledik */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px)); 
     gap: 25px;
     padding: 30px;
-    justify-content: center; /* Kartları kendi içinde ortalar */
+    justify-content: center; 
    
-    margin: 0 auto; /* Menüden kalan boşlukta merkeze oturur */
-    max-width: calc(100% - 20px); /* Kenarlardan taşmayı önler */
+    margin: 0 auto; 
+    max-width: calc(100% - 20px);
 }
 .bilgi-kart {
     background: linear-gradient(135deg, rgba(0, 20, 10, 0.9), rgba(5, 40, 20, 0.8));
     border: 2px solid #00ff96;
-    /* Kenarları hafifçe içe kırık "dosya" efekti */
     clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 100%, 0% 100%);
     padding: 25px;
     position: relative;
@@ -531,7 +516,6 @@ button:active, .inis-btn:active {
     background: rgba(0, 40, 20, 0.9);
 }
 
-/* Kartın köşesine "Gizli" damgası efekti */
 .bilgi-kart::before {
     content: "CLASSIFIED";
     position: absolute;
@@ -557,7 +541,7 @@ button:active, .inis-btn:active {
 }
 
 .bilgi-kart p {
-    color: #a0d2b1; /* Daha yumuşak, okunabilir bir yeşil-gri */
+    color: #a0d2b1; 
     font-style: italic;
     font-size: 0.95rem;
 }
@@ -569,7 +553,7 @@ button:active, .inis-btn:active {
     font-size: 0.75rem;
     text-decoration: underline;
 }
-/* --- YENİ FİLTRE BUTONLARI TASARIMI --- */
+
 .filtre-butonlari {
     text-align: center;
     margin: 20px 0;
@@ -579,8 +563,8 @@ button:active, .inis-btn:active {
 }
 
 .filtre-btn {
-    /* Senin sorduğun 'saydamlık' burada çözülüyor */
-    background: rgba(0, 255, 150, 0.15) !important; /* İçini %15 yeşil doldurduk, artık görünür! */
+  
+    background: rgba(0, 255, 150, 0.15) !important; 
     color: #12bb75 !important;
     border: 1px solid #00ff96 !important;
     padding: 8px 20px;
@@ -592,14 +576,13 @@ button:active, .inis-btn:active {
     font-weight: bold;
 }
 
-/* Üzerine gelince (Hover) patlama efekti */
 .filtre-btn:hover {
     background: #00ff96 !important;
     color: #000 !important;
     box-shadow: 0 0 15px #00ff96;
 }
 
-/* Farklı Kategoriler İçin Renkler (İstersen hepsini yeşil de bırakabilirsin) */
+
 .filtre-btn.dizi {
     background: rgba(0, 212, 255, 0.15) !important;
     border-color: #0095b3 !important;
@@ -614,36 +597,36 @@ button:active, .inis-btn:active {
 }
 .filtre-btn.kitap:hover { background: #ffcc00 !important; color: #000 !important; }
 
-/* --- MODAL SİSTEMİ KESİN ÇÖZÜM --- */
+
 #bilgi-modal {
-    display: none; /* JS açana kadar kapalı */
-    position: fixed; /* Ekrana çiviler */
-    z-index: 99999; /* Her şeyin üstünde */
+    display: none; 
+    position: fixed; 
+    z-index: 99999; 
     left: 0;
     top: 0;
-    width: 100vw; /* Tam genişlik */
-    height: 100vh; /* Tam yükseklik */
-    background-color: rgba(0, 0, 0, 0.9); /* Arka plan karartma */
+    width: 100vw; 
+    height: 100vh; 
+    background-color: rgba(0, 0, 0, 0.9); 
     backdrop-filter: blur(10px);
 }
 
-/* Modal açıldığında JS bu sınıfı ekler */
+
 #bilgi-modal.aktif {
-    display: flex !important; /* Görünür yap ve flex kullan */
-    align-items: center; /* Dikeyde tam ortala */
-    justify-content: center; /* Yatayda tam ortala */
+    display: flex !important; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 .modal-icerik {
     background: #000b05;
     border: 2px solid #00ff96;
     padding: 30px;
-    max-width: 500px; /* Genişlik sınırı */
-    width: 90%; /* Mobilde sığması için */
+    max-width: 500px; 
+    width: 90%; 
     border-radius: 10px;
     box-shadow: 0 0 50px rgba(0, 255, 150, 0.4);
     position: relative;
-    animation: modalAcilis 0.3s ease-out; /* Küçük bir giriş efekti */
+    animation: modalAcilis 0.3s ease-out; 
 }
 
 @keyframes modalAcilis {
@@ -651,7 +634,7 @@ button:active, .inis-btn:active {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Kapatma Butonu (X) */
+
 .kapat-btn {
     position: absolute;
     top: 10px;
@@ -668,3 +651,4 @@ button:active, .inis-btn:active {
     transform: scale(1.2);
 
 }
+
