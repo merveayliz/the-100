@@ -149,7 +149,6 @@ const karakterler = [
 
 ];
 
-// anasayfa.js içindeki fonksiyonu böyle sarmalayalım
 window.addEventListener('DOMContentLoaded', () => {
     karakterleriGoster();
 });
@@ -157,7 +156,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function karakterleriGoster() {
     let alan = document.getElementById("karakterler-alani");
-    alan.innerHTML = ""; // Alanı temizle
+    alan.innerHTML = ""; 
 
     karakterler.forEach(kisi => {
         alan.innerHTML += `
@@ -176,16 +175,11 @@ function karakterleriGoster() {
 karakterleriGoster();
 
 
-/* NOT: Mevcut "karakterler" dizindeki her objeye 
-   replik: "..." şeklinde bir satır eklemeyi unutma! 
-*/
-
-// 1. Kartları ekrana basan fonksiyonu GÜNCELLİYORUZ
 function karakterleriGoster() {
      let alan = document.getElementById("karakterler-alani");
     alan.innerHTML = ""; 
 
-    // Her karaktere döngüde bir "index" (sıra numarası) veriyoruz
+   
     karakterler.forEach((kisi, sira) => {
         alan.innerHTML += `
             <div class="kart" onclick="modalAc(${sira})"> 
@@ -200,30 +194,24 @@ function karakterleriGoster() {
     });
 }
 
-// 2. Modalı açan ve içini dolduran beyin fonksiyonu
+
 function modalAc(siraNo) {
-    // Tıklanan sıradaki karakterin bilgilerini diziden çek
     const secilenKarakter = karakterler[siraNo];
-
-    // HTML içindeki boş modal elemanlarını bul ve verileri yerleştir
     document.getElementById("modal-isim").innerText = secilenKarakter.isim;
-    // Eğer replik yoksa varsayılan bir yazı yazdır:
     document.getElementById("modal-soz").innerText = `"${secilenKarakter.replik || 'May we meet again.'}"`;
-
-    // Modal katmanını görünür yap
     document.getElementById("soz-modal").style.display = "block";
 }
 
-// 3. Modalı kapatan fonksiyon
+
 function modalKapat() {
-    // Display'i none yaparak tekrar gizle
     document.getElementById("soz-modal").style.display = "none";
 }
 
-// Ekstra Pro İpucu: Boşluğa tıklayınca da kapansın
+
 window.onclick = function(event) {
     let modal = document.getElementById("soz-modal");
-    if (event.target == modal) { // Eğer tıklanan yer modalın kendisiyse (içindeki kutu değilse)
+    if (event.target == modal) {
         modalKapat();
     }
+
 }
