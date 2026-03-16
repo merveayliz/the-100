@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>ARK-OS | Test Merkezi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="sohbet-body">
     
 <div class="sidebar">
-    <div class="profil-kutu">
-        <div class="profil-resim">
-            <img src="img/murphy.jpg" alt="Profil">
-        </div>
-
+   <div class="profil-kutu">
+    <div class="profil-resim">
+        <a href="profil.html">
+            <img src="img/murphy.jpg" id="nav-avatar" alt="Profil" title="Profilime Git">
+        </a>
     </div>
+    <span id="nav-user-name" style="color:#00ff96; font-size:0.8rem; display:block; text-align:center; cursor:pointer;" onclick="location.href='profil.html'"></span>
+</div>
 
     <nav class="side-nav">
         <ul class="nav-links">
             <li><a href="anasayfa.html"><i class="icon">📋</i>Ana Sayfa</a></li>
+            <li><a href="kesfet.html"><i class="icon">🌍</i> Keşfet </a></li>
             <li><a href="sohbet.html"><i class="icon">💬</i> Sohbet Odası</a></li>
-            <li><a href="test.html"><i class="icon">📝</i> Testler (Quiz)</a></li>
+            <li><a href="test.html"><i class="icon">📝</i> Testler </a></li>
             <li><a href="bilgiler.html"><i class="icon">💡</i> İlginç Bilgiler</a></li>
            
         </ul>
@@ -61,6 +64,6 @@
             </div>
     </div>
 
-    <script src="test.js"></script>
+    <script type="module" src="js/test.js"></script>
 </body>
 </html>
