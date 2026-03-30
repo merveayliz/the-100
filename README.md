@@ -1,6 +1,6 @@
 # 🌍 The 100 Fan Hub
 
-Bu proje, "The 100" hayranlarının bir araya gelebileceği, karakterleri tanıyıp dizinin evreninde gezinebileceği interaktif bir web platformudur. 
+Bu proje, "The 100" hayranlarının bir araya gelebileceği, karakterleri tanıyıp dizinin evreninde gezinebileceği interaktif bir web platformu değil arayüz tasarımıdır. ark os web bu sitenin güncellenmiş web platformudur. 
 *Not: Bu site şu an için sadece masaüstü (PC) görünümü için optimize edilmiştir.*
 
 ---
