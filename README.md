@@ -30,6 +30,3 @@ Bu proje, "The 100" hayranlarının bir araya gelebileceği, karakterleri tanıy
 * **JavaScript (ES6+)** - Dinamik karakter kartları, isim hatırlama fonksiyonu, filtreleme algoritması ve DOM manipülasyonu.
 
 
-
----
-*Created with passion by [merveayliz](https://github.com/merveayliz)*
